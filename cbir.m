@@ -82,7 +82,7 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 clc;
-delete 'C:\matlab\cheryl project\identified\*.jpg';
+delete 'C:\matlab\pixort\identified\*.jpg';
 %global I
 [f,p] = uigetfile('*.jpg;*.png');
 I = imread([p f]);
@@ -108,7 +108,7 @@ guidata(hObject,handles);
 
 
 name=get(handles.edit2,'String');
-aaa='C:\matlab\cheryl project\';
+aaa='C:\matlab\pixort\';
 bbb=strcat(aaa,name);
 ccc='\';
 ddd=strcat(bbb,ccc);
@@ -200,7 +200,7 @@ end
 images=uigetdir;
 jpgfiles = dir(fullfile(images,'\*.jpg*'));
 for i=1:length(jpgfiles); % we have 16 images we have in or folder
-    images ='C:\matlab\cheryl project\dataset';
+    images ='C:\matlab\pixort\dataset';
     jpgfiles=dir(fullfile(images,'\*.jpg*'));
 
     im1=jpgfiles(i).name;
@@ -237,7 +237,7 @@ for i=1:length(jpgfiles); % we have 16 images we have in or folder
     y
     ddd
         if y==x
-        imwrite(im2,['C:\matlab\cheryl project\identified\IMG' int2str(k), '.jpg']);
+        imwrite(im2,['C:\matlab\pixort\identified\IMG' int2str(k), '.jpg']);
         imwrite(im2,[ddd int2str(k), '.jpg']);
 	k=k+1;
     end
@@ -271,7 +271,7 @@ function pushbutton2_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton2 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-winopen('C:\matlab\cheryl project\identified\');
+winopen('C:\matlab\pixort\identified\');
 
 
 function edit1_Callback(hObject, eventdata, handles)
